@@ -17,17 +17,16 @@ export default function Header(props: headerProps) {
         <header className="flex items-center justify-between p-4 w-full">
             <div className="flex items-center space-x-4 w-full">
                 <div className="flex items-center space-x-4 w-full justify-between">
-                    <HamburgerMenuIcon cursor={'pointer'} className="w-6 h-6" />
-                    <h1 className="text-2xl font-bold text-center">Hippo Asset Tracking</h1>
+                    <HamburgerMenuIcon cursor={'pointer'} className="w-8 h-8 sm:w-12 sm:h-12 md:hidden" />
+                    <h1 className="text-sm font-extrabold text-center w-full sm:text-xl ">Hippo Asset Tracking</h1>
                     {props.user ? (
-                        <div className={"flex gap-5 items-center"}>
-                            <Button variant={'ghost'}><GearIcon className="w-8 h-8 font-bold" /></Button>
-                            <Button className="btn btn-sm" onClick={props.onLogout}>Log out</Button>
+                        <div className={"flex gap-4 items-center "}>
+                            <GearIcon cursor={'pointer'} className="w-8 h-8 sm:w-12 sm:h-12 font-bold" />
                         </div>
                     ) : (
-                        <div className={"flex gap-5"}>
-                            <Button variant={'secondary'} className="btn btn-sm" onClick={props.onLogin}>Log in</Button>
-                            <Button className="btn btn-sm btn-primary" onClick={props.onLogout}>Sign up</Button>
+                        <div className={"flex flex-col gap-2 sm:flex-row"}>
+                            <Button variant={'secondary'} className="text-xs sm:text-base w-20 h-8 sm:w-24 sm:h-12" onClick={props.onLogin}>Log in</Button>
+                            <Button className="text-xs sm:text-base w-20 h-8 sm:w-24 sm:h-12" onClick={props.onLogout}>Sign up</Button>
                         </div>
                     )
                     }

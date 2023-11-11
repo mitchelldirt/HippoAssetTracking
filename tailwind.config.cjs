@@ -2,10 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx,html}',
+    './components/**/*.{ts,tsx,html}',
+    './app/**/*.{ts,tsx,html}',
+    './src/**/*.{ts,tsx,html}',
+      './index.html'
 	],
   theme: {
     container: {
@@ -16,6 +17,13 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        'header': '1fr 3fr 6fr'
+      },
+      boxShadow: {
+        'header': '0px 4px 10px -7px #000',
+        'footer': '0px -4px 10px -7px #000'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

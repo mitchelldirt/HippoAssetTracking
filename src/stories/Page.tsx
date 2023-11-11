@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../components/ui/Header';
 import './page.css';
+import Footer from "@/components/ui/Footer.tsx";
 
 type User = {
   name: string;
@@ -67,6 +68,7 @@ export const Page: React.FC = () => {
           Viewports addon in the toolbar
         </div>
       </section>
+      <Footer />
     </article>
   );
 };

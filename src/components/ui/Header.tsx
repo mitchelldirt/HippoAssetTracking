@@ -14,19 +14,19 @@ interface headerProps {
 export default function Header(props: headerProps) {
 
     return (
-        <header className="flex items-center justify-between p-4 w-full">
+        <header className="flex items-center justify-between p-4 w-full bg-gray-200 shadow-header">
             <div className="flex items-center space-x-4 w-full">
-                <div className="flex items-center space-x-4 w-full justify-between">
-                    <HamburgerMenuIcon cursor={'pointer'} className="w-8 h-8 sm:w-12 sm:h-12 md:hidden" />
-                    <h1 className="text-sm font-extrabold text-center w-full sm:text-xl ">Hippo Asset Tracking</h1>
+                <div className="grid grid-cols-3 items-center w-full">
+                    <HamburgerMenuIcon cursor={'pointer'} className="w-8 h-8 sm:w-10 sm:h-10" />
+                    <h1 className="text-sm font-extrabold text-center w-full sm:text-xl self-center ">Hippo Asset Tracking 🦛</h1>
                     {props.user ? (
-                        <div className={"flex gap-4 items-center "}>
-                            <GearIcon cursor={'pointer'} className="w-8 h-8 sm:w-12 sm:h-12 font-bold" />
+                        <div className={"flex gap-4 items-center justify-end"}>
+                            <GearIcon cursor={'pointer'} className="w-8 h-8 sm:w-10 sm:h-10 font-bold" />
                         </div>
                     ) : (
-                        <div className={"flex flex-col gap-2 sm:flex-row"}>
-                            <Button variant={'secondary'} className="text-xs sm:text-base w-20 h-8 sm:w-24 sm:h-12" onClick={props.onLogin}>Log in</Button>
-                            <Button className="text-xs sm:text-base w-20 h-8 sm:w-24 sm:h-12" onClick={props.onLogout}>Sign up</Button>
+                        <div className={"flex flex-col items-end gap-2 sm:flex-row justify-end sm:items-center"}>
+                            <Button variant={'secondary'} className="text-xs sm:text-base w-20 h-8 sm:w-24 sm:h-10" onClick={props.onLogin}>Log in</Button>
+                            <Button className="text-xs sm:text-base w-20 h-8 sm:w-24 sm:h-10" onClick={props.onLogout}>Sign up</Button>
                         </div>
                     )
                     }

@@ -11,7 +11,7 @@ function App() {
     <>
         <Header onLogin={() => console.log('howdy')} onLogout={() => console.log('yee haw')} />
         <main className={'w-full h-full'}>
-            <Sidebar listItems={defaultListItems} visible={true} />
+            <Sidebar listItems={defaultListItems} />
         </main>
         <Footer />
     </>

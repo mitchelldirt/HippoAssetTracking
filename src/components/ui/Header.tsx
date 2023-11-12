@@ -1,5 +1,6 @@
 import {HamburgerMenuIcon, GearIcon } from "@radix-ui/react-icons";
 import {Button} from "@/components/ui/button.tsx";
+import useHippoStore from "@/store.ts";
 
 type User = {
     name: string;
@@ -17,7 +18,7 @@ export default function Header(props: headerProps) {
         <header className="flex items-center justify-between p-4 w-full bg-gray-200 shadow-header">
             <div className="flex items-center space-x-4 w-full">
                 <div className="grid grid-cols-3 items-center w-full">
-                    <HamburgerMenuIcon cursor={'pointer'} className="w-8 h-8 sm:w-10 sm:h-10" />
+                    <HamburgerMenuIcon onClick={useHippoStore(state => state.toggleSidebar)} cursor={'pointer'} className="w-8 h-8 sm:w-10 sm:h-10" />
                     <h1 className="text-sm font-extrabold text-center w-full sm:text-xl self-center ">Hippo Asset Tracking 🦛</h1>
                     {props.user ? (
                         <div className={"flex gap-4 items-center justify-end"}>

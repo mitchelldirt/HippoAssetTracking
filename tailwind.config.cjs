@@ -33,10 +33,22 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "sidebar-close": {
+          '0%': { opacity: 1 },
+          '1%': { opacity: .9 },
+          '100%': {opacity: 0, display: "none"}
+        },
+        "sidebar-open": {
+            "0%": { opacity: 0, display: "block" },
+            "1%": { opacity: .1, display: "block" },
+            "100%": { opacity: 1, display: "block" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "sidebar-close": "sidebar-close .75s ease-out forwards",
+        "sidebar-open": "sidebar-open 1s ease-out forwards",
       },
     },
   },

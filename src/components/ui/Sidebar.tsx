@@ -28,7 +28,7 @@ export default function Sidebar({listItems}: sidebarProps) {
 
     return (
         <aside key={'sidebar'}
-               className={`w-1/4 h-full bg-gray-200 ease-in-out duration-500 ${display ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+               className={`w-1/4 h-full bg-gray-200 ease-in-out duration-300 ${display ? 'w-full sm:w-1/4 opacity-100' : 'w-0 opacity-0'}`}>
             <div className={'w-full h-full flex flex-col items-center justify-center'}>
                 {renderListItems(listItems)}
             </div>

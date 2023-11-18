@@ -1,5 +1,5 @@
 import {Payment, columns} from "./columns"
-import {DataTable} from "./data-table"
+import {DataTable} from "../../ui/data-table.tsx"
 import {Suspense, useEffect, useState} from "react";
 
 async function getData(): Promise<Payment[]> {
@@ -28,7 +28,7 @@ async function getData(): Promise<Payment[]> {
 }
 
 export default function DemoPage() {
-    const [data, setData] = useState<any[]>([]);
+    const [data, setData] = useState<Payment[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {

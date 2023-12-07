@@ -1,6 +1,7 @@
 import {HamburgerMenuIcon, GearIcon } from "@radix-ui/react-icons";
 import {Button} from "@/components/ui/button.tsx";
 import useHippoStore from "@/store.ts";
+import {Link} from "react-router-dom";
 
 type User = {
     name: string;
@@ -19,7 +20,9 @@ export default function Header(props: headerProps) {
             <div className="flex items-center space-x-4 w-full">
                 <div className="grid grid-cols-3 items-center w-full">
                     <HamburgerMenuIcon onClick={useHippoStore(state => state.toggleSidebar)} cursor={'pointer'} className="w-8 h-8 sm:w-10 sm:h-10" />
+                    <Link to={'/'}>
                     <h1 className="text-sm font-extrabold text-center w-full sm:text-xl self-center ">Hippo Asset Tracking 🦛</h1>
+                    </Link>
                     {props.user ? (
                         <div className={"flex gap-4 items-center justify-end"}>
                             <GearIcon cursor={'pointer'} className="w-8 h-8 sm:w-10 sm:h-10 font-bold" />

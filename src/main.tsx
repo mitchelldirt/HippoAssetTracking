@@ -7,15 +7,22 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom"
+import Home from './routes/Home.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
-  },
-  {
-    path: "/assets",
-    element: <Assets />
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "assets",
+        element: <Assets />
+      }
+    ]
   }
 ])
 

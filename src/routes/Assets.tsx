@@ -1,7 +1,7 @@
 // import {Button} from '@/components/ui/button.tsx';
 // import {Calendar} from '@/components/ui/calendar.tsx';
-import DemoPage from "@/components/tables/assets/component.tsx";
-import {Helmet} from "react-helmet"
+import AssetsTable from "@/components/tables/assets/component.tsx";
+import {Helmet} from "react-helmet-async"
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
                 <title>All Assets</title>
                 <meta name="description" content="All of your assets in one table :)" />
             </Helmet>
-            <DemoPage />
+            <AssetsTable />
     </>
   )
 }

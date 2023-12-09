@@ -81,7 +81,7 @@ export default function AssetsTable() {
     }, []);
 
     return (
-        <div className="container mx-auto py-10">
+        <div className="w-full container mx-auto py-10">
             <Suspense fallback={<div>Loading...</div>}>
                 <DataTable columns={columns} data={data}/>
             </Suspense>

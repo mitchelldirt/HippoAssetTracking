@@ -1,0 +1,79 @@
+import { ColumnDef } from "@tanstack/react-table";
+import { MoreHorizontal } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+export type Employee = {
+  id: string;
+  name: string;
+  email: string;
+  status: "Active" | "Inactive";
+  location: string;
+  department: string;
+  role: string;
+};
+
+export const columns: ColumnDef<Employee>[] = [
+  {
+    id: "actions",
+    cell: ({ row }) => {
+      const employee = row.original;
+
+      return (
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="h-8 w-8 p-0">
+              <span className="sr-only">Open menu</span>
+              <MoreHorizontal className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuItem>
+              <Link to={`/employees/${employee.id}`}>Edit employee</Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>View assets</DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => navigator.clipboard.writeText(employee.email)}
+            >
+              Copy employee email
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      );
+    },
+  },
+  {
+    accessorKey: "name",
+    header: "Name",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+  },
+    {
+        accessorKey: "email",
+        header: "Email",
+    },
+    {
+        accessorKey: "location",
+        header: "Location",
+    },
+    {
+        accessorKey: "department",
+        header: "Department",
+    },
+    {
+        accessorKey: "role",
+        header: "Role",
+    },
+];

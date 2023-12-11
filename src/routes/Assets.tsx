@@ -3,7 +3,7 @@
 import AssetsTable from "@/components/tables/assets/component.tsx";
 import {Helmet} from "react-helmet-async"
 
-function App() {
+function Assets() {
   return (
     <>
             <Helmet>
@@ -15,4 +15,4 @@ function App() {
   )
 }
 
-export default App
+export default Assets

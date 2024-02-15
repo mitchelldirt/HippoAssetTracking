@@ -17,4 +17,8 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="obj\Debug\net8.0\server.csproj.AssemblyReference.cache" />
+    </ItemGroup>
+
 </Project>

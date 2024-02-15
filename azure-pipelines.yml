@@ -12,7 +12,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: ls
-- script: dotnet build **/*.csproj --configuration $(buildConfiguration)
+- script: ls cd server ls cd server ls
+- script: dotnet build server/server/server.csproj --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 

@@ -5,7 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <InvariantGlobalization>true</InvariantGlobalization>
-        <UserSecretsId>aspnet-server-15C88265-2162-4DC7-8AF1-59B31679638E</UserSecretsId>
+        <UserSecretsId>aspnet-server-E5BBDB68-FA60-4855-8E4D-88B48D0CA66A</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,10 +15,6 @@
         <PackageReference Include="Microsoft.Identity.Web" Version="2.15.2"/>
         <PackageReference Include="Microsoft.Identity.Web.DownstreamApi" Version="2.15.2"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="obj\Debug\net8.0\server.csproj.AssemblyReference.cache" />
     </ItemGroup>
 
 </Project>

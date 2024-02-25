@@ -9,6 +9,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home.tsx";
 import { HelmetProvider } from "react-helmet-async";
+import AssetEdit from "./routes/AssetEdit.tsx";
+// import AssetEdit from "./routes/AssetEdit.tsx";
 
 
 const router = createBrowserRouter([
@@ -23,6 +25,12 @@ const router = createBrowserRouter([
       {
         path: "assets",
         element: <Assets />,
+        children: [
+          {
+            path: "edit",
+            element: <AssetEdit />
+          }
+        ]
       },
       {
         path: "departments",

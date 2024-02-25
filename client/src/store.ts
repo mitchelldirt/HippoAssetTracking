@@ -12,6 +12,7 @@ const useHippoStore = create<BearState>()(
     devtools(
         persist(
             (set) => ({
+                currentPath: '/',
                 updateCurrentPath: (newPath: string) => set({currentPath: newPath}),
                 displaySidebar: window.innerWidth > 640,
                 toggleSidebar: () => set((state) => (

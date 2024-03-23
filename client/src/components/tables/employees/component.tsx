@@ -36,7 +36,7 @@ async function getData(): Promise<Employee[]> {
 }
 
 export default function EmployeesTable() {
-    const [data, setData] = useState<Payment[]>([]);
+    const [data, setData] = useState<Employee[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {

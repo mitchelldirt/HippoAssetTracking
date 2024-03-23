@@ -68,7 +68,7 @@ async function getData(): Promise<Asset[]> {
 }
 
 export default function AssetsTable() {
-    const [data, setData] = useState<Payment[]>([]);
+    const [data, setData] = useState<Asset[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
